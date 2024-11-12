@@ -1,0 +1,18 @@
+<html>
+    <title>{% block title %}My Website{% endblock %}</title>
+    <header>
+        
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </header>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+    <br><br<br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved. </p>
+        </footer>
+</html>
+

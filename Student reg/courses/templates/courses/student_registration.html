@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Student Registration</title>
+</head>
+<body>
+    <h1>Register Student</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>First name: <input type="text" name="first_name" required></p>
+        <p>Last name: <input type="text" name="last_name" required></p>
+        <p>Email: <input type="email" name="email" required></p>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

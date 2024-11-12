@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Enroll in Course</title>
+</head>
+<body>
+    <h1>Enroll in Course</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>Select Student:
+            <select name="student_id">
+                {% for student in students %}
+                    <option value="{{ student.id }}">{{ student }}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <p>Select Course:
+            <select name="course_id">
+                {% for course in courses %}
+                    <option value="{{ course.id }}">{{ course.name }}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <button type="submit">Enroll</button>
+    </form>
+</body>
+</html>

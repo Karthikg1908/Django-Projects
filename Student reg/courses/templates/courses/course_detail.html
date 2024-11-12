@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>{{ course.name }}</title>
+</head>
+<body>
+    <h1>{{ course.name }}</h1>
+    <p>{{ course.description }}</p>
+    <h2>Enrolled Students</h2>
+    <ul>
+        {% for student in students %}
+            <li>{{ student }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
